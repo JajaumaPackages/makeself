@@ -1,6 +1,6 @@
 Name:           makeself
 Version:        2.2.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 BuildArch:      noarch
 Summary:        Make self-extractable archives on Unix
 Group:          Development/Tools
@@ -53,6 +53,9 @@ install -p -m644 makeself.1.gz %{buildroot}%{_mandir}/man1/
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.2.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Wed Jul 31 2013 Dridi Boukelmoune <dridi.boukelmoune@gmail.com> - 2.2.0-2
 - Preserve timestamps during installation
 
