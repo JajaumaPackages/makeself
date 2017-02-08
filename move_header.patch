@@ -1,8 +1,8 @@
 --- makeself.sh
 +++ makeself.sh
-@@ -162,7 +162,7 @@
- TAR_ARGS=cvf
+@@ -174,7 +174,7 @@
  TAR_EXTRA=""
+ GPG_EXTRA=""
  DU_ARGS=-ks
 -HEADER=`dirname "$0"`/makeself-header.sh
 +HEADER=/usr/libexec/makeself-header.sh
