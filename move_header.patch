@@ -1,0 +1,11 @@
+--- makeself.sh
++++ makeself.sh
+@@ -162,7 +162,7 @@
+ TAR_ARGS=cvf
+ TAR_EXTRA=""
+ DU_ARGS=-ks
+-HEADER=`dirname "$0"`/makeself-header.sh
++HEADER=/usr/libexec/makeself-header.sh
+ TARGETDIR=""
+ NOOVERWRITE=n
+ DATE=`LC_ALL=C date`
