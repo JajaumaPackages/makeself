@@ -1,6 +1,6 @@
 Name:           makeself
 Version:        2.3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 BuildArch:      noarch
 Summary:        Make self-extractable archives on Unix
 Group:          Development/Tools
@@ -54,6 +54,9 @@ install -p -m644 %{name}.1.gz %{buildroot}%{_mandir}/man1
 
 
 %changelog
+* Thu Feb 08 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Mon Aug 21 2017 Dridi Boukelmoune <dridi.boukelmoune@gmail.com> - 2.3.1-1
 - Bump version to 2.3.1
 
