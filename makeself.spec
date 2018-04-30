@@ -1,13 +1,13 @@
 Name:           makeself
-Version:        2.3.1
-Release:        2%{?dist}
+Version:        2.4.0
+Release:        1%{?dist}
 BuildArch:      noarch
 Summary:        Make self-extractable archives on Unix
 Group:          Development/Tools
 
 License:        GPLv2+
 URL:            http://%{name}.io/
-Source:         http://github.com/megastep/%{name}/archive/release-%{version}.tar.gz
+Source:         https://github.com/megastep/%{name}/archive/release-%{version}/%{name}-%{version}.tar.gz
 
 # This patch changes the path to the sourced header script
 Patch0:         move_header.patch
@@ -41,9 +41,10 @@ mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_libexecdir}
 mkdir -p %{buildroot}%{_mandir}/man1
 
-install -p -m755 %{name}.sh %{buildroot}%{_bindir}/%{name}
+install -p -m755 %{name}.sh %{buildroot}%{_bindir}
 install -p -m644 %{name}-header.sh %{buildroot}%{_libexecdir}
 install -p -m644 %{name}.1.gz %{buildroot}%{_mandir}/man1
+ln -s %{name}.sh %{buildroot}%{_bindir}/%{name}
 
 
 %files
@@ -54,6 +55,12 @@ install -p -m644 %{name}.1.gz %{buildroot}%{_mandir}/man1
 
 
 %changelog
+* Mon Apr 30 2018 Dridi Boukelmoune <dridi.boukelmoune@gmail.com> - 2.4.0-1
+- Bump version to 2.4.0
+- Change the Source URL to get %%{name}-%%{version}.tar.gz
+- Ship the script as makeself.sh as per upstream documentation
+- Add a symbolic link to the previous script name (just makeself)
+
 * Thu Feb 08 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.3.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
