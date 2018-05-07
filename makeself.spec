@@ -14,8 +14,10 @@ Patch0:         move_header.patch
 
 BuildRequires:  %{_bindir}/iconv
 
+%if 0%{?fedora} || 0%{?rhel} > 7
 Recommends:     gnupg
 Recommends:     openssl
+%endif
 
 
 %description
